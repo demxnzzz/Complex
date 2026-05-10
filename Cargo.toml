@@ -1,0 +1,29 @@
+[package]
+name = "sensor-systems"
+version = "0.1.0"
+edition = "2021"
+authors = ["Anthorne Deambrozio Flowers"]
+description = "Production Rust systems engineering: low-latency data ingestion, embedded robotics patterns"
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "latency_profiling"
+harness = false
+
+[[example]]
+name = "sensor_pipeline"
+
+[[example]]
+name = "ipc_coordination"
+
+[[example]]
+name = "memory_profiling"
